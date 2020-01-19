@@ -1,0 +1,10 @@
+import csv
+
+line = input("图片个数：")
+with open('face_data.csv', 'w',newline="") as csvfile:
+    fieldnames = ['add', 'name']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    for i in range(1,int(line)+1):
+        address = "D:\Python_WorkPlace\python_data\picture"+str(i)+".pgm"
+        writer.writerow({'add':address,'name': '张凯博'})
+print("文件生成成功！")
