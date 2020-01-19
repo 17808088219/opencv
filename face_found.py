@@ -13,7 +13,7 @@ while True:
         img = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
 
     cv2.imshow("video", frame)
-    if cv2.waitKey(50)&0xff == ord("q"):
+    if cv2.waitKey(50)&0xff == ord("q"):        #按“q”键关闭摄像头显示
         break
 
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()     #关闭窗口显示
